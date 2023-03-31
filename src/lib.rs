@@ -111,11 +111,11 @@ impl Default for GainParams {
 }
 
 impl Plugin for Gain {
-    const NAME: &'static str = "Gain";
-    const VENDOR: &'static str = "Moist Plugins GmbH";
+    const NAME: &'static str = "db-meter";
+    const VENDOR: &'static str = "pedalboard";
     // You can use `env!("CARGO_PKG_HOMEPAGE")` to reference the homepage field from the
     // `Cargo.toml` file here
-    const URL: &'static str = "https://youtu.be/dQw4w9WgXcQ";
+    const URL: &'static str = "https://github.com/pedalbaord";
     const EMAIL: &'static str = "info@example.com";
 
     const VERSION: &'static str = env!("CARGO_PKG_VERSION");
@@ -192,8 +192,8 @@ impl Plugin for Gain {
 }
 
 impl ClapPlugin for Gain {
-    const CLAP_ID: &'static str = "com.moist-plugins-gmbh.gain";
-    const CLAP_DESCRIPTION: Option<&'static str> = Some("A smoothed gain parameter example plugin");
+    const CLAP_ID: &'static str = "com.github.pedalboard.db_meter";
+    const CLAP_DESCRIPTION: Option<&'static str> = Some("Exposing db level as MIDI message");
     const CLAP_MANUAL_URL: Option<&'static str> = Some(Self::URL);
     const CLAP_SUPPORT_URL: Option<&'static str> = None;
     const CLAP_FEATURES: &'static [ClapFeature] = &[
